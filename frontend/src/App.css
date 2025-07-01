@@ -73,6 +73,13 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
 /* Print styles */
 @media print {
   .no-print {
@@ -82,4 +89,116 @@
   .print-break {
     page-break-after: always;
   }
+}
+
+/* Additional dark mode utility classes */
+.dark {
+  color-scheme: dark;
+}
+
+/* Ensure proper contrast in dark mode */
+.dark .bg-white {
+  background-color: #1f2937;
+}
+
+.dark .text-gray-900 {
+  color: #f9fafb;
+}
+
+.dark .text-gray-800 {
+  color: #e5e7eb;
+}
+
+.dark .text-gray-700 {
+  color: #d1d5db;
+}
+
+.dark .text-gray-600 {
+  color: #9ca3af;
+}
+
+.dark .text-gray-500 {
+  color: #6b7280;
+}
+
+.dark .border-gray-300 {
+  border-color: #4b5563;
+}
+
+.dark .border-gray-200 {
+  border-color: #374151;
+}
+
+.dark .bg-gray-50 {
+  background-color: #111827;
+}
+
+.dark .bg-gray-100 {
+  background-color: #1f2937;
+}
+
+.dark .bg-gray-200 {
+  background-color: #374151;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* Custom focus styles for better accessibility */
+.focus-visible:focus {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Improved button states */
+button:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Better hover states for interactive elements */
+button:hover,
+.hover\:shadow-lg:hover {
+  transform: translateY(-1px);
+}
+
+/* Ensure proper contrast for form elements in dark mode */
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #f9fafb;
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+  border-color: #8b5cf6;
+  ring-color: #8b5cf6;
+}
+
+/* Improve modal backdrop in dark mode */
+.dark .modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Ensure proper table styling in dark mode */
+.dark table {
+  color: #f9fafb;
+}
+
+.dark th {
+  background-color: #374151;
+  color: #d1d5db;
+}
+
+.dark td {
+  border-color: #4b5563;
+}
+
+.dark tbody tr:hover {
+  background-color: #374151;
 }
