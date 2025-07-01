@@ -673,12 +673,12 @@ const Navigation = ({ activeTab, onTabChange }) => {
   const { user } = useAuth();
   
   const tabs = [
-    { id: 'ideas', label: 'Ideas', icon: '💡' },
-    { id: 'analytics', label: 'Analytics', icon: '📊' },
+    { id: 'ideas', label: 'Ideas' },
+    { id: 'analytics', label: 'Analytics' },
   ];
 
   if (user?.is_admin) {
-    tabs.push({ id: 'admin', label: 'Admin', icon: '⚙️' });
+    tabs.push({ id: 'admin', label: 'Admin' });
   }
 
   return (
