@@ -693,7 +693,6 @@ const Navigation = ({ activeTab, onTabChange }) => {
               : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
           }`}
         >
-          <span>{tab.icon}</span>
           <span>{tab.label}</span>
         </button>
       ))}
